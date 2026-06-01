@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      <main className="container flex flex-col items-center">
+      <main className="container flex flex-col items-center mx-auto">
         <div className="search-bar w-full max-w-lg mt-12 mb-5 px-2">
           <input
             type="text"
