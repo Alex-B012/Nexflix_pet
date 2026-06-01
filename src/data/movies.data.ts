@@ -68,6 +68,7 @@ const MOVIES: IMovie[] = [
     image_pos: 2,
     title_stroke_color: "#FFBF00",
     genres: [GENRES.DRAMA, GENRES.ROMANCE, GENRES.COMING_OF_AGE],
+    trailerYT_id: "A1PTIxYrTVw",
     comments: [
       {
         id: 1,
@@ -353,6 +354,7 @@ const MOVIES: IMovie[] = [
     image: images.more_graffiti_img,
     image_pos: 6,
     genres: [GENRES.ROAD_MOVIE, GENRES.COMEDY, GENRES.DRAMA],
+    trailerYT_id: "y_01QJYDavw",
     comments: [
       {
         id: 1,
@@ -384,6 +386,7 @@ const MOVIES: IMovie[] = [
     image_pos: 0,
     title_stroke_color: "orange",
     genres: [GENRES.DRAMA, GENRES.COMEDY],
+    trailerYT_id: "N3cMM0YyxLw",
     comments: [
       {
         id: 1,
@@ -415,12 +418,13 @@ const MOVIES: IMovie[] = [
     id: 11,
     title: "Mr. Briggs",
     description:
-      "An elderly man reflects on his life and the impact of his decisions on his family and community.",
+      "In Los Angeles, a man in his early forties drifting between stalled ambition and strained relationships is pulled into an unexpected friendship after meeting a confident stranger on a flight. What begins as a promising connection slowly unravels, forcing him to confront the cost of the life he has built—and the one he may never reach.",
     rating: 7.6,
     image: images.mr_briggs_img,
     image_pos: 5,
     title_stroke_color: "goldenrod",
     genres: [GENRES.DRAMA, GENRES.MELODRAMA],
+    trailerYT_id: "z_-_hIuE1YA",
     comments: [
       {
         id: 1,
@@ -538,6 +542,55 @@ const MOVIES: IMovie[] = [
         name: "Megan Sullivan",
         stars: 4,
         text: "Perfect for fans of space exploration stories, combining science fiction ideas with emotional storytelling and visually impressive moments.",
+      },
+    ],
+  },
+  {
+    id: 14,
+    title: "The Art of Design",
+    description:
+      "This is documentary series that explores the creative processes and inspirations of various designers across different fields, showcasing their work and the impact of design on our world.",
+    rating: 8.1,
+    image: images.art_of_design_img,
+    image_pos: 6,
+    genres: [GENRES.DOCUMENTARY],
+    trailerYT_id: "DYaq2sWTWAA",
+    comments: [
+      {
+        id: 1,
+        name: "Olivia Bennett",
+        stars: 5,
+        text: "A beautifully crafted documentary that reveals how deeply thought-out and emotional the design process can be. Every story feels personal and inspiring.",
+      },
+      {
+        id: 2,
+        name: "Ethan Collins",
+        stars: 5,
+        text: "Fascinating insight into the minds of designers. It really changes how you look at everyday objects and the creativity behind them.",
+      },
+      {
+        id: 3,
+        name: "Sophia Turner",
+        stars: 4,
+        text: "Each episode feels like a deep dive into a different creative world. Some stories are more engaging than others, but overall very well made.",
+      },
+      {
+        id: 4,
+        name: "Liam Parker",
+        stars: 5,
+        text: "Incredibly inspiring. It shows how design is not just aesthetics but problem-solving, storytelling, and human experience combined.",
+      },
+      {
+        id: 5,
+        name: "Emma Reynolds",
+        stars: 4,
+        text: "A calm, thoughtful documentary that highlights the beauty of creativity in all its forms. Perfect for anyone interested in art and design.",
+      },
+      {
+        id: 6,
+        name: "Noah Mitchell",
+        stars: 5,
+        text: "Makes you appreciate the invisible effort behind the objects and visuals we interact with daily. Very eye-opening and well structured.",
       },
     ],
   },

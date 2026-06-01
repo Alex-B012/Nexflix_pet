@@ -4,6 +4,7 @@ import { useTheme } from "../../hooks/useTheme.js";
 import { MOVIES } from "../../data/movies.data.js";
 import MovieDetailsLayout from "./MovieDetailsLayout.js";
 import type { MovieComment } from "../home/movie.interface.js";
+import { getTitlePositionClass } from "@/shared/utils/movieCard.js";
 
 const MovieCommentsComponent = lazy(() =>
   import("./MovieComments.js").then((module) => ({
@@ -32,17 +33,41 @@ const MovieDetails = () => {
     );
   }
 
+  const title_pos_class = getTitlePositionClass(movie.image_pos);
+  const title_stroke_color = movie.title_stroke_color || "";
+
   return (
     <MovieDetailsLayout>
-      <div className="w-full max-w-5xl mx-auto flex flex-col gap-12 md:gap-20">
+      <div className="w-full max-w-5xl px-2 mx-auto flex flex-col gap-12 md:gap-20">
         {/* Top Section */}
-        <div className="flex flex-col md:flex-row gap-8 items-start">
+        <div className="flex flex-col md:flex-row gap-8 items-center md:justify-center">
           {/* Poster */}
-          <img
-            src={movie.image}
-            alt={movie.title}
-            className={`w-full  rounded-xl shadow-md  ${theme === "dark" && "dark:shadow-black/40"} shadow-gray-300 object-cover md:w-72`}
-          />
+          <div
+            className={`relative min-w-74 h-95 rounded-xl overflow-hidden group shadow-md  ${theme === "dark" && "dark:shadow-black/40"} shadow-gray-300`}
+          >
+            <img
+              src={movie.image}
+              alt={movie.title}
+              className={`w-full h-full object-cover`}
+            />
+
+            <div
+              className={`absolute inset-0 h-full ${title_pos_class} flex items-center justify-center`}
+            >
+              <p
+                className={`px-2 text-white text-3xl font-bold uppercase text-shadow-md`}
+                style={{
+                  WebkitTextStroke: `1px ${title_stroke_color}`,
+                }}
+              >
+                {movie.title}
+              </p>
+            </div>
+
+            <p className="absolute bottom-0.5 left-1 px-2 py-1 bg-black/20 rounded text-white text-sm font-semibold">
+              IMDb: {movie.rating}
+            </p>
+          </div>
 
           {/* Info */}
           <div className="flex flex-col gap-10 text-red">

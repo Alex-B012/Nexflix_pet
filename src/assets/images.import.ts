@@ -11,6 +11,7 @@ import movies_img from "./images/n_movies.webp";
 import mr_briggs_img from "./images/n_mr_briggs.webp";
 import young_age_img from "./images/n_young_age.webp";
 import astra_space_adventure_img from "./images/n_astra_space_adventure.webp";
+import art_of_design_img from "./images/art_of_design.webp";
 
 export const images = {
   scream_img,
@@ -26,4 +27,5 @@ export const images = {
   mr_briggs_img,
   young_age_img,
   astra_space_adventure_img,
+  art_of_design_img,
 };

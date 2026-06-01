@@ -2,6 +2,7 @@ export enum GENRES {
   FANTASY = "fantasy",
   ADVENTURE = "adventure",
   ACTION = "action",
+  DOCUMENTARY = "documentary",
   DRAMA = "drama",
   ROMANCE = "romance",
   COMEDY = "comedy",
