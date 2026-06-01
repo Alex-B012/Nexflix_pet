@@ -4,7 +4,7 @@ import { ROUTERS } from "../../data/router.data";
 import type { IMovie } from "./movie.interface";
 import Modal from "../../components/ui/Modal";
 import { MemoizedFavoriteBtn } from "./FavoriteBtn";
-import { getTitlePositionClass } from "../../utils/movieCard";
+import { getTitlePositionClass } from "../../shared/utils/movieCard";
 
 interface MovieCardProps {
   data: IMovie;

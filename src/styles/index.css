@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* @custom-variant dark (&:where(.dark, .dark *)); */
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer utilities {
   @keyframes fadeIn {
@@ -51,7 +51,7 @@
   }
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
     --text-h: #f3f4f6;
@@ -70,7 +70,7 @@
   #social .button-icon {
     filter: invert(1) brightness(2);
   }
-} */
+}
 
 body {
   margin: 0;
@@ -90,7 +90,6 @@ h1,
 h2 {
   font-family: var(--heading);
   font-weight: 500;
-  /* color: var(--text-h); */
 }
 
 h1 {

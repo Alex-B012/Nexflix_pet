@@ -1,13 +1,9 @@
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useState, type PropsWithChildren } from "react";
 import { themeColors, ThemeContext } from "./theme.context";
 
 type Theme = (typeof themeColors)[keyof typeof themeColors];
 
-interface ThemeProviderProps {
-  children: ReactNode;
-}
-
-const ThemeProvider = ({ children }: ThemeProviderProps) => {
+const ThemeProvider = ({ children }: PropsWithChildren) => {
   const [theme, setTheme] = useState<Theme>(
     () => (localStorage.getItem("theme") as Theme) || themeColors.dark,
   );
