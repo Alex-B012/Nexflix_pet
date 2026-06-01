@@ -1,5 +1,9 @@
 import { createElement, memo } from "react";
-import type { FavoriteBtnProps } from "./favoriteBtn.types";
+
+interface FavoriteBtnProps {
+  isFavorite: boolean;
+  onToggleFavorite: () => void;
+}
 
 const FavoriteBtn = ({ isFavorite, onToggleFavorite }: FavoriteBtnProps) =>
   createElement(

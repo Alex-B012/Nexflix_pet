@@ -1,16 +1,20 @@
 import { useMemo, useState } from "react";
 import { MOVIES } from "../../data/movies.data";
-
 import useDebounce from "../../hooks/useDebounce.js";
-import { MemoizedMovieCard } from "../../pages/home/MovieCard.jsx";
+import { MemoizedMovieCard } from "./MovieCard.js";
 
-// 1:39:22
+function getInitialFavorites(): number[] {
+  try {
+    const stored = localStorage.getItem("favorites");
+    return stored ? (JSON.parse(stored) as number[]) : [];
+  } catch {
+    return [];
+  }
+}
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [favorites, setFavorites] = useState(() => {
-    return JSON.parse(localStorage.getItem("favorites")) || [];
-  });
+  const [favorites, setFavorites] = useState<number[]>(getInitialFavorites);
 
   const debouncedSearchTerm = useDebounce(searchTerm, 800);
   const movies = useMemo(() => {

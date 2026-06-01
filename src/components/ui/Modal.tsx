@@ -1,9 +1,14 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 
-const Modal = ({ children, onClose }) => {
+interface ModalProps {
+  children: React.ReactNode;
+  onClose: () => void;
+}
+
+const Modal = ({ children, onClose }: ModalProps) => {
   useEffect(() => {
-    const handleEsc = (e) => {
+    const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
     window.addEventListener("keydown", handleEsc);
@@ -14,7 +19,7 @@ const Modal = ({ children, onClose }) => {
     <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center">
       <div className="relative w-full max-w-xl h-fit flex flex-col justify-center bg-neutral-900 text-white p-1 rounded-2xl shadow-lg animate-fadeIn sm:p-3">
         <div
-          onClick={(e) => {
+          onClick={(e: React.MouseEvent<HTMLDivElement>) => {
             e.stopPropagation();
             onClose();
           }}

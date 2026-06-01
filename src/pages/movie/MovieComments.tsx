@@ -1,4 +1,13 @@
-const MovieComments = ({ comments }) => {
+interface MovieCommentsProps {
+  comments: {
+    id: number;
+    name: string;
+    text: string;
+    stars?: number;
+  }[];
+}
+
+const MovieComments = ({ comments }: MovieCommentsProps) => {
   return (
     <div className="movie-comments py-8">
       <h2 className="text-2xl font-semibold mb-16">Comments</h2>

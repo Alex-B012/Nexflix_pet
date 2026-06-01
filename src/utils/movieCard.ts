@@ -1,4 +1,4 @@
-const TITLE_POSITION_CLASSES = {
+const TITLE_POSITION_CLASSES: Record<number, string> = {
   0: "pb-73",
   1: "pb-65",
   2: "pb-45",
@@ -9,7 +9,7 @@ const TITLE_POSITION_CLASSES = {
   7: "pt-60",
 };
 
-const getTitlePositionClass = (imagePos) => {
+const getTitlePositionClass = (imagePos: number): string => {
   return TITLE_POSITION_CLASSES[imagePos] || "";
 };
 

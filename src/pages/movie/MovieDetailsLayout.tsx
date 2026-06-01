@@ -1,9 +1,13 @@
 import { useTheme } from "../../hooks/useTheme.js";
 
-import ScrollToTop from "../../components/ScrollToTop.jsx";
-import GoBackButton from "../../components/ui/btns/GoBackButton.jsx";
+import ScrollToTop from "../../components/ScrollToTop.js";
+import GoBackButton from "../../components/ui/btns/GoBackButton.js";
 
-const MovieDetailsLayout = ({ children }) => {
+interface MovieDetailsLayoutProps {
+  children: React.ReactNode;
+}
+
+const MovieDetailsLayout = ({ children }: MovieDetailsLayoutProps) => {
   const { theme } = useTheme();
 
   return (

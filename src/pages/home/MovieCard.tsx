@@ -1,11 +1,18 @@
 import { memo, useCallback, useState } from "react";
-import { getTitlePositionClass } from "../../utils/movieCard";
-import { MemoizedFavoriteBtn } from "../../pages/home/FavoriteBtn";
-import Modal from "../../components/ui/Modal.jsx";
 import { Link } from "react-router-dom";
 import { ROUTERS } from "../../data/router.data";
+import type { IMovie } from "./movie.interface";
+import Modal from "../../components/ui/Modal";
+import { MemoizedFavoriteBtn } from "./FavoriteBtn";
+import { getTitlePositionClass } from "../../utils/movieCard";
 
-const MovieCard = ({ data, isFavorite, setFavorites }) => {
+interface MovieCardProps {
+  data: IMovie;
+  isFavorite: boolean;
+  setFavorites: React.Dispatch<React.SetStateAction<number[]>>;
+}
+
+const MovieCard = ({ data, isFavorite, setFavorites }: MovieCardProps) => {
   const [isOpenTrailer, setIsOpenTrailer] = useState(false);
   const title_pos_class = getTitlePositionClass(data.image_pos);
   const title_stroke_color = data.title_stroke_color || "";
@@ -50,10 +57,9 @@ const MovieCard = ({ data, isFavorite, setFavorites }) => {
               }}
               src={`https://www.youtube.com/embed/${data.trailerYT_id}?autoplay=1`}
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
             />
           </div>
         </Modal>

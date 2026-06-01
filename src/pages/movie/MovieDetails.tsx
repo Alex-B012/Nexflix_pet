@@ -2,15 +2,16 @@ import { lazy, Suspense } from "react";
 import { useParams } from "react-router-dom";
 import { useTheme } from "../../hooks/useTheme.js";
 import { MOVIES } from "../../data/movies.data.js";
-import MovieDetailsLayout from "./MovieDetailsLayout.jsx";
+import MovieDetailsLayout from "./MovieDetailsLayout.js";
+import type { MovieComment } from "../home/movie.interface.js";
 
 const MovieCommentsComponent = lazy(() =>
-  import("./MovieComments.jsx").then((module) => ({
+  import("./MovieComments.js").then((module) => ({
     default: module.MovieComments,
   })),
 );
 
-const LazyMovieComments = ({ comments }) => {
+const LazyMovieComments = ({ comments }: { comments: MovieComment[] }) => {
   return (
     <Suspense fallback={<p>Loading comments...</p>}>
       <MovieCommentsComponent comments={comments} />
