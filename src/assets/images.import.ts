@@ -12,7 +12,7 @@ import mr_briggs_img from "../assets/images/mr_briggs.webp";
 import young_age_img from "../assets/images/young_age.webp";
 import astra_space_adventure_img from "../assets/images/astra_space_adventure.webp";
 
-export {
+export const images = {
   scream_img,
   hobbit_img,
   alice_img,

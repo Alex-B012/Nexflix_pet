@@ -6,7 +6,7 @@ import { ThemeProvider } from "./context/ThemeProvider.jsx";
 import MainRoutes from "./routing/MainRoutes.jsx";
 import { BrowserRouter } from "react-router-dom";
 
-createRoot(document.getElementById("root")).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider>
       <BrowserRouter>

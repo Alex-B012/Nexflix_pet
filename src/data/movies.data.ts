@@ -1,46 +1,15 @@
-import {
-  alice_img,
-  chicago_img,
-  corner_boys_img,
-  first_date_img,
-  hobbit_img,
-  scream_img,
-  spiderman_img,
-  a_moment_called_forever_img,
-  more_graffiti_img,
-  movies_img,
-  mr_briggs_img,
-  young_age_img,
-  astra_space_adventure_img,
-} from "../assets/images.import";
+import { GENRES, type IMovie } from "../pages/home/movie.interface";
+import { images } from "../assets/images.import";
 
-export const GENRES = {
-  FANTASY: "fantasy",
-  ADVENTURE: "adventure",
-  ACTION: "action",
-  DRAMA: "drama",
-  ROMANCE: "romance",
-  COMEDY: "comedy",
-  THRILLER: "thriller",
-  CRIME: "crime",
-  HORROR: "horror",
-  MYSTERY: "mystery",
-  SCI_FI: "sci-fi",
-  SUPERHERO: "superhero",
-  MUSICAL: "musical",
-  COMING_OF_AGE: "coming-of-age",
-  MELODRAMA: "melodrama",
-  ROAD_MOVIE: "road-movie",
-};
-
-const MOVIES = [
+const MOVIES: IMovie[] = [
   {
     id: 1,
     title: "The Hobbit",
     description:
       "A reluctant hobbit joins a company of dwarves on an epic quest to reclaim a lost kingdom from a powerful dragon.",
     rating: 9.4,
-    image: hobbit_img,
+    image: images.hobbit_img,
+    image_pos: -1,
     title_stroke_color: "green",
     genres: [GENRES.FANTASY, GENRES.ADVENTURE, GENRES.ACTION],
     trailerYT_id: "JTSoD4BBCJc",
@@ -95,7 +64,7 @@ const MOVIES = [
     description:
       "Alice navigates first love, heartbreak, and self-discovery during a transformative year in a quiet coastal town.",
     rating: 7.3,
-    image: alice_img,
+    image: images.alice_img,
     image_pos: 2,
     title_stroke_color: "#FFBF00",
     genres: [GENRES.DRAMA, GENRES.ROMANCE, GENRES.COMING_OF_AGE],
@@ -138,7 +107,7 @@ const MOVIES = [
     description:
       "In a city driven by ambition and fame, two performers chase success while secrets threaten to destroy them.",
     rating: 7.6,
-    image: chicago_img,
+    image: images.chicago_img,
     image_pos: 6,
     title_stroke_color: "#2F6FA3",
     genres: [GENRES.MUSICAL, GENRES.CRIME, GENRES.DRAMA],
@@ -170,7 +139,7 @@ const MOVIES = [
     description:
       "A masked killer begins targeting a group of teens, turning their town into a nightmare of fear and suspicion.",
     rating: 7.9,
-    image: scream_img,
+    image: images.scream_img,
     image_pos: 1,
     genres: [GENRES.HORROR, GENRES.THRILLER, GENRES.MYSTERY],
     trailerYT_id: "UJrghaPJ0RY",
@@ -219,7 +188,7 @@ const MOVIES = [
     description:
       "Three friends growing up in a tough neighborhood are forced to choose between loyalty and survival.",
     rating: 6.5,
-    image: corner_boys_img,
+    image: images.corner_boys_img,
     image_pos: 1,
     title_stroke_color: "#1E2A44",
     genres: [GENRES.CRIME, GENRES.DRAMA, GENRES.THRILLER],
@@ -257,7 +226,7 @@ const MOVIES = [
     description:
       "A nervous first date turns into an unforgettable night filled with unexpected moments and emotional truths.",
     rating: 7.1,
-    image: first_date_img,
+    image: images.first_date_img,
     image_pos: 1,
     title_stroke_color: "pink",
     genres: [GENRES.ROMANCE, GENRES.COMEDY, GENRES.DRAMA],
@@ -283,7 +252,7 @@ const MOVIES = [
     description:
       "A young man with extraordinary abilities struggles to balance everyday life while protecting his city from rising threats.",
     rating: 9.2,
-    image: spiderman_img,
+    image: images.spiderman_img,
     image_pos: 4,
     genres: [GENRES.ACTION, GENRES.ADVENTURE, GENRES.SCI_FI, GENRES.SUPERHERO],
     trailerYT_id: "t06RUxPbp_c",
@@ -338,7 +307,7 @@ const MOVIES = [
     description:
       "Two souls meet at the wrong time but fall into a love that feels like it could last an eternity.",
     rating: 8.0,
-    image: a_moment_called_forever_img,
+    image: images.a_moment_called_forever_img,
     image_pos: 5,
     genres: [GENRES.ROMANCE, GENRES.DRAMA, GENRES.MELODRAMA],
     trailerYT_id: "Xn2PsXD8m4A",
@@ -381,7 +350,7 @@ const MOVIES = [
     description:
       "A group of street artists in a vibrant city create murals that challenge societal norms and spark conversations.",
     rating: 7.5,
-    image: more_graffiti_img,
+    image: images.more_graffiti_img,
     image_pos: 6,
     genres: [GENRES.ROAD_MOVIE, GENRES.COMEDY, GENRES.DRAMA],
     comments: [
@@ -411,7 +380,7 @@ const MOVIES = [
     description:
       "A collection of short films that explore different themes and storytelling techniques.",
     rating: 6.1,
-    image: movies_img,
+    image: images.movies_img,
     image_pos: 0,
     title_stroke_color: "orange",
     genres: [GENRES.DRAMA, GENRES.COMEDY],
@@ -448,7 +417,7 @@ const MOVIES = [
     description:
       "An elderly man reflects on his life and the impact of his decisions on his family and community.",
     rating: 7.6,
-    image: mr_briggs_img,
+    image: images.mr_briggs_img,
     image_pos: 5,
     title_stroke_color: "goldenrod",
     genres: [GENRES.DRAMA, GENRES.MELODRAMA],
@@ -497,7 +466,7 @@ const MOVIES = [
     description:
       "A coming-of-age story about a teenager navigating the complexities of adolescence and first love.",
     rating: 7.9,
-    image: young_age_img,
+    image: images.young_age_img,
     image_pos: 5,
     title_stroke_color: "dark-gray",
     genres: [GENRES.DRAMA, GENRES.ROMANCE, GENRES.COMING_OF_AGE],
@@ -506,6 +475,7 @@ const MOVIES = [
       {
         id: 1,
         name: "Leah Coleman",
+        stars: 0,
         text: "A relatable coming-of-age story that captures teenage confusion, growth, and emotional change in a very realistic and honest way.",
       },
       {
@@ -528,7 +498,7 @@ const MOVIES = [
     description:
       "An epic journey through space as astronauts face challenges and discover the wonders of the universe.",
     rating: 8.1,
-    image: astra_space_adventure_img,
+    image: images.astra_space_adventure_img,
     image_pos: 6,
     genres: [GENRES.SCI_FI, GENRES.ADVENTURE],
     trailerYT_id: "BsCNKuB93BA",

@@ -4,6 +4,8 @@ import { MOVIES } from "../../data/movies.data";
 import useDebounce from "../../hooks/useDebounce.js";
 import { MemoizedMovieCard } from "../../pages/home/MovieCard.jsx";
 
+// 1:39:22
+
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [favorites, setFavorites] = useState(() => {
